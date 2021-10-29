@@ -4,19 +4,22 @@ public abstract class Compte {
     // Attribut
     protected int code;
     protected Float solde;
-    protected Float taux;
     // Attributs statics
     protected static int nbCompte;
     protected static int nbTransaction;
-    protected static Float montantTaxe;
+    protected static Float montantTaxe = 0f;
 
     // Constructeur
-    public Compte(Float solde, Float taux) {
+    public Compte(Float solde) {
         nbCompte++;
         this.code = nbCompte;
         this.solde = solde;
-        this.taux = taux;
     }
+
+    // Méthodes
+    public abstract void versement(Float montant);
+
+    public abstract void retrait(Float montant) ;
 
     // GETTERS ET SETTERS
     public int getCode() {
@@ -34,15 +37,6 @@ public abstract class Compte {
 
     public Compte setSolde(Float solde) {
         this.solde = solde;
-        return this;
-    }
-
-    public Float getTaux() {
-        return taux;
-    }
-
-    public Compte setTaux(Float taux) {
-        this.taux = taux;
         return this;
     }
 
