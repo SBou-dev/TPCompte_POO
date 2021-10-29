@@ -71,6 +71,11 @@ public class Main {
         comptePremium.retrait(120000f);
         System.out.println(comptePremium.getSolde());
 
+        // *************** Liste de comptes *************** //
+        System.out.println("La liste des comptes crées : ");
+        for (Compte c: Compte.getComptes()) {
+            System.out.println(c.toString());
+        }
 
 
 

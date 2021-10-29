@@ -10,6 +10,7 @@ public class CompteSimple extends Compte implements IVerified {
         super(solde);
         this.commission = 5;
         this.decouvert = 0f;
+        comptes.add(this);
     }
 
     // Méthodes

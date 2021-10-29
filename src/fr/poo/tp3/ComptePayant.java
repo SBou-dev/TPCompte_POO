@@ -13,6 +13,7 @@ public class ComptePayant extends Compte implements IVerified, ICreated {
         this.coutCB = 5;
         this.commission = 1;
         creationCompte();
+        comptes.add(this);
     }
 
     // Méthodes

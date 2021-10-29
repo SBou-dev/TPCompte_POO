@@ -1,5 +1,8 @@
 package fr.poo.tp3;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class Compte {
     // Attribut
     protected int code;
@@ -8,6 +11,8 @@ public abstract class Compte {
     protected static int nbCompte;
     protected static int nbTransaction;
     protected static Float montantTaxe = 0f;
+    // Liste des comptes
+    protected static List<Compte> comptes = new ArrayList<>();
 
     // Constructeur
     public Compte(Float solde) {
@@ -53,9 +58,15 @@ public abstract class Compte {
         return montantTaxe;
     }
 
+    public static List<Compte> getComptes() {
+        return comptes;
+    }
+
+    public static void setComptes(List<Compte> comptes) {
+        Compte.comptes = comptes;
+    }
+
     // toString
-
-
     @Override
     public String toString() {
         return "Compte{" +

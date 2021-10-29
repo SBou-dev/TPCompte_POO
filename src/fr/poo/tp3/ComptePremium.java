@@ -8,6 +8,7 @@ public class ComptePremium extends Compte implements ICreated {
         super(solde);
         this.coutCB = 10;
         creationCompte();
+        comptes.add(this);
     }
 
     // Méthodes
