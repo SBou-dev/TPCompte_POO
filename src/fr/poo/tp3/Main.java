@@ -9,7 +9,7 @@ public class Main {
         System.out.println("Nombre de comptes crées : " + Compte.getNbCompte());
         // Résultat attendu : 3
 
-        // *************** Opérations : retraits et versements *************** //
+        // *************** Opérations : retraits *************** //
         // compteSimple fait un retrait de 200€ :
         compteSimple.retrait(200f);
         System.out.println("Solde du compteSimple après retrait de 200€ : " + compteSimple.getSolde());
@@ -25,7 +25,7 @@ public class Main {
         System.out.println("Solde du comptePremium après retrait de 400€ : " + comptePremium.getSolde());
         // Résultat attendu : 600 (-400 // Solde initial: 1000)
 
-        /***********************************************************************************/
+        // *************** Opérations : versements *************** //
 
         // Versement de 200€ à CompteSimple
         compteSimple.versement(200f);
@@ -42,6 +42,8 @@ public class Main {
         System.out.println("Solde du comptePremium après versemment de 200€ : " + comptePremium.getSolde());
         // Résultat attendu : 800 (+200 // Solde initial: 600)
 
+        // *************** Nombre de transactions et taxes perçues *************** //
+
         // Nombre de transactions effectuée
         System.out.println("Nombre de transaction : " + Compte.getNbTransaction());
         // Résultat attendu : 6
@@ -50,7 +52,7 @@ public class Main {
         System.out.println("Commission perçue : " + Compte.getMontantTaxe());
         // Resultat attendu : 12.0
 
-        // Découverts :
+        // *************** Découverts *************** //
         // CompteSimple : transaction impossible < 0
         System.out.print("Découvert sur un compte simple : ");
         compteSimple.retrait(1200f);
