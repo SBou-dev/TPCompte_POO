@@ -44,4 +44,15 @@ public class ComptePremium extends Compte implements ICreated {
         this.solde = this.solde - montant;
         nbTransaction++;
     }
+
+    // toString
+
+    @Override
+    public String toString() {
+        return "ComptePremium{" +
+                "code=" + code +
+                ", solde=" + solde +
+                ", coutCB=" + coutCB +
+                '}';
+    }
 }

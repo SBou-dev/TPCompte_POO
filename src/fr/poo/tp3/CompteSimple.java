@@ -89,4 +89,16 @@ public class CompteSimple extends Compte implements IVerified {
         this.commission = commission;
         return this;
     }
+
+    // toString
+
+    @Override
+    public String toString() {
+        return "CompteSimple{" +
+                "code=" + code +
+                ", solde=" + solde +
+                ", commission=" + commission +
+                ", decouvert=" + decouvert +
+                '}';
+    }
 }

@@ -53,4 +53,14 @@ public abstract class Compte {
         return montantTaxe;
     }
 
+    // toString
+
+
+    @Override
+    public String toString() {
+        return "Compte{" +
+                "code=" + code +
+                ", solde=" + solde +
+                '}';
+    }
 }

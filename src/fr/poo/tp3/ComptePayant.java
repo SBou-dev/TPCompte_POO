@@ -109,4 +109,17 @@ public class ComptePayant extends Compte implements IVerified, ICreated {
         this.decouvert = decouvert;
     }
 
+    // ToString
+
+
+    @Override
+    public String toString() {
+        return "ComptePayant{" +
+                "code=" + code +
+                ", solde=" + solde +
+                ", coutCB=" + coutCB +
+                ", commission=" + commission +
+                ", decouvert=" + decouvert +
+                '}';
+    }
 }
